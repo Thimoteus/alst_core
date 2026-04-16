@@ -1,0 +1,38 @@
+{
+  "name": "alst_core",
+  "type": "module",
+  "main": "./src/ALST.gen.js",
+  "types": "./types/ALST.gen.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/ALST.gen.d.ts",
+      "import": "./src/ALST.gen.js"
+    },
+    "./Angles": {
+      "types": "./types/Angles.gen.d.ts",
+      "import": "./src/Angles.gen.js"
+    },
+    "./Julian": {
+      "import": "./src/Julian.res.js"
+    }
+  },
+  "files": [
+    "src/**/*.res",
+    "src/**/*.res.js",
+    "src/**/*.gen.js",
+    "types/**/*.gen.d.ts",
+    "rescript.json"
+  ],
+  "dependencies": {
+    "rescript": "^12.2.0"
+  },
+  "scripts": {
+    "build": "rescript && tsc",
+    "dev": "rescript watch",
+    "prepare": "rescript && tsc",
+    "test": "rescript && node --test src/*Test.res.js"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
