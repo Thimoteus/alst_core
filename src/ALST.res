@@ -2,7 +2,7 @@
  Formats the Apparent Local Sidereal Time (ALST) for a given date and longitude.
 */
 @genType
-let alst: (Date.t, Angles.Deg.t) => (float, float, float) = (date, long) => {
+let alst = (date: Date.t, long: Angles.Deg.t): (float, float, float) => {
   let long = long->Angles.Deg.normalize_long
   let jd_ut = Julian.fromDate(date)
   let jd_tt = Date.fromTime(date->Date.getTime + 32.184 * 1_000.)->Julian.fromDate

@@ -15,7 +15,7 @@
   "suffix": ".res.js",
   "gentypeconfig": {
     "module": "esmodule",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "generatedFileExtension": ".gen.tsx"
   }
 }

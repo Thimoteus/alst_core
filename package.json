@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "rescript && tsc",
+    "clean": "rescript clean",
     "dev": "rescript watch",
     "prepare": "rescript && tsc",
     "test": "rescript && node --test src/*Test.res.js"
