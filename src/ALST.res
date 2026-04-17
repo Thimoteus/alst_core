@@ -35,7 +35,7 @@ let alst = (date: Date.t, long: Angles.Deg.t): (float, float, float) => {
   }
   let eqeq = delta_psi * Angles.Rad.cos(epsilon->Angles.Deg.toRad)
   let gast = gmst->Julian.unwrap + eqeq
-  let alst = gast + long->Angles.Deg.unwrap
+  let alst = (((gast + long->Angles.Deg.unwrap / 15.) % 24.) + 24.) % 24.
   let h = Math.floor(alst)
   let alst = alst - h
   let m = Math.floor(60. * alst)
