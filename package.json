@@ -1,6 +1,22 @@
 {
-  "name": "alst_core",
+  "name": "@thimoteus/alst_core",
+  "version": "1.0.0",
+  "description": "Apparent Local Sidereal Time (ALST) calculation, written in ReScript. Consumable from both TypeScript and ReScript.",
+  "license": "MIT",
+  "author": "Evante Garza-Licudine",
+  "keywords": [
+    "rescript",
+    "astronomy",
+    "sidereal",
+    "sidereal-time",
+    "alst",
+    "julian-date",
+    "angles"
+  ],
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./src/ALST.gen.js",
   "types": "./types/ALST.gen.d.ts",
   "exports": {
